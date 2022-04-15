@@ -77,18 +77,18 @@
 
             $Transaction_id = $_POST['Transaction_id'];
             $Card_no = $_POST['Card_no'];
+            $Email = $_SESSION['Email'];
 
-            $sql = "INSERT INTO transaction (Transaction_id, Amount, Date, Card_no) VALUES ('$Transaction_id', '$Price1', now(), '$Card_no')";
+            $sql = "INSERT INTO transaction (Transaction_id, Amount, Date, Card_no, Vehicle_id, Email, Start_date) VALUES ('$Transaction_id', '$Price1', now(), '$Card_no', '$Vehicle_id', '$Email', '$Start_date_ture')";
             $result = mysqli_query($connection, $sql);
 
             
-            $Email = $_SESSION['Email'];
 
             // echo $Email;
             // echo '<br>';
             // echo $Transaction_id;
             // echo '<br>';
-            // echo $Vehicle_gid;
+            // echo $Vehicle_id;
             // echo '<br>';
             // echo $Company_name;
             // echo '<br>';
