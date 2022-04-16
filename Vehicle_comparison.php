@@ -15,39 +15,6 @@
 <body>
     <?php include 'navbar.php' ?>
     <div class = "h1"><h1 >This is Vehicle comparison page</h1></div>
-    <!-- <div class="h1">
-        <p> It will have a table of entered vehicles and can be selected for viewing info</p><br>
-
-        <form action="View_vehicle_info.php" method="post">
-            <table border="1" width="200" height="200" cellspacing="20">
-                <tr>
-                    <td>Vehicle ID</td>
-                    <td>Plate_No</td>
-                    <td>Status</td>
-                    <td>Model</td>
-                    
-                </tr>
-                <tr>
-                    <td>a</td>
-                    <td>b</td>
-                    <td>c</td>
-                    <td>d</td>
-                    <td><input type="submit" value="Select"/><br><br></td>
-                </tr>
-                <tr>
-                    <td>a</td>
-                    <td>b</td>
-                    <td>c</td>
-                    <td>d</td>
-                    <td><input type="submit" value="Select"/><br><br></td>
-                </tr>
-            </table>
-        </form>
-
-        <form action="View_vehicle.php" method="post">
-            <input type="submit" value="Go back"/>
-        </form>
-    </div> -->
 
     <?php
         $connection = mysqli_connect("localhost", "root", "88888888", "471project");
