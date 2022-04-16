@@ -9,15 +9,10 @@
     $Driver_license = mysqli_real_escape_string($connection, $_REQUEST['license']);
     $Phone = mysqli_real_escape_string($connection, $_REQUEST['phone']);
 
-
-    if (mysqli_connect_errno($connection)){
-        echo "Failed to connect";
-    }
-
     $sql = "INSERT INTO customer (Email, Lname, Mname, Fname, Driver_license, Phone) VALUES ('$Email', '$Lname', '$Mname', '$Fname', '$Driver_license', '$Phone')";
 
     if (!mysqli_query($connection, $sql)){
-        echo "Failed to sql: " .$Phone;
+        echo "Failed to sql: ";
     }
 
     if ($_GET["job"] == "update"){
@@ -64,13 +59,13 @@
 
     mysqli_close($connection);
 
-    ?>
+?>
 
 
-        <form action="Order_list.php" method="post">
-            <input type="submit" value="View my order"/>
-        </form>
+    <form action="Order_list.php" method="post">
+        <input type="submit" value="View my order"/>
+    </form>
 
-        <form action="Index.php" method="post">
-            <input type="submit" value="Rent a vehicle"/>
-        </form>
+    <form action="Index.php" method="post">
+        <input type="submit" value="Rent a vehicle"/>
+    </form>

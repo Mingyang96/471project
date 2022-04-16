@@ -28,7 +28,6 @@
             </select>
         <br><br><input type="text" name="Comment"/><br><br>
 
-
             <input type="submit" name = "send" value="Send feedback"/>
         </form>
     </div>
@@ -43,10 +42,6 @@
             $Comment = $_POST['Comment'];
             $Rate = $_POST['Rate'];
 
-            // echo $Email;
-            // echo $Vehicle_id;
-            // echo $Comment;
-            // echo intval($Rate);
 
             $sql5 = "INSERT INTO feedback (Vehicle_id, Email, Rate, Comment) VALUES ('$Vehicle_id', '$Email', '$Rate', '$Comment')";
             $result = mysqli_query($connection, $sql5);

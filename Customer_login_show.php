@@ -1,16 +1,9 @@
- 
 <?php include 'navbar.php' ?> 
-    <?php
+<?php
     $connection = mysqli_connect("localhost", "root", "88888888", "471project");
 
-    // $Email = mysqli_real_escape_string($connection, $_REQUEST['email']);
     session_start();
     $Email = $_SESSION['Email'];
-
-
-    if (mysqli_connect_errno($connection)){
-        echo "Failed to connect";
-    }
 
     if ($_GET["job"] == "update"){
         $Email = $_POST["email"];
@@ -41,7 +34,6 @@
     <th> Phone </th>
     <tr>";
 
-    session_start();
     $row = mysqli_fetch_array($result);
     $custEmail = $row['Email'];
     $custLname = $row['Lname'];
@@ -49,7 +41,7 @@
     $custFname = $row['Fname'];
     $custDriver = $row['Driver_license'];
     $custPhone = $row['Phone'];
-    
+
     $_SESSION['index'] = $row['Email'];
 
     echo "<td>" . $custEmail . "</td>";
@@ -58,14 +50,14 @@
     echo "<td>" . $custFname . "</td>";
     echo "<td>" . $custDriver . "</td>";
     echo "<td>" . $custPhone . "</td>";
-    
+
     echo '<tr>';
-    
+
     echo '<th> Emergency_Fname </th>
     <th> Emergency_Lname </th>
     <th> Emergency_Phone </th>';
     echo '<tr>';
-    
+
     while ($row = mysqli_fetch_array($result2)){
 
         echo "<td>" . $row['Fname'] . "</td>";
@@ -74,21 +66,19 @@
         
         echo '<tr>';
     }
-    
-    // echo "<td><a href = 'Edit_customer_info.php'>Update</td>";
+
     mysqli_close($connection);
-    
-    ?>
+?>
 
 
-        <form action="Order_list.php" method="post">
-            <input type="submit" value="View my order"/>
-        </form>
+<form action="Order_list.php" method="post">
+    <input type="submit" value="View my order"/>
+</form>
 
-        <form action="Index.php" method="post">
-            <input type="submit" value="Rent a vehicle"/>
-        </form>
+<form action="Index.php" method="post">
+    <input type="submit" value="Rent a vehicle"/>
+</form>
 
-        <form action="Edit_customer_info.php" method="post">
-            <input type="submit" value="Update Info/Emergency contact"/>
-        </form>
+<form action="Edit_customer_info.php" method="post">
+    <input type="submit" value="Update Info/Emergency contact"/>
+</form>

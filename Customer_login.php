@@ -9,8 +9,11 @@
 <style>
     .h1{
         text-align: center;
-        font-size: 1em;
-        font-weight: bold;
+        font-size: 7em;
+        color: #FFFFFF;
+    }
+    body {
+        background-image: url('Images/BG.jpg');
     }
 </style>
 <body>

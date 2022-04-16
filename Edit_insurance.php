@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,12 +42,9 @@
             $Company_name = $_POST['Company_name'];
             $Amount = $_POST['Amount'];
             
-    
-            //$sql = "INSERT INTO return_car (Vehicle_id, GID, Company_name, Email, Date, Penalty) VALUES ('$Vehicle_id', '$Vehicle_gid', '$Vehicle_company_name', '$Email', '$Date', '$Penalty')";
             $sql2 = "UPDATE insurance SET Company_name = '$Company_name', Amount = '$Amount' WHERE Insurance_no = '".$Insurance_no."'";
-
             $result = mysqli_query($connection, $sql2);
-            //$result = mysqli_query($connection, $sql);
+        
             header("Location: View_vehicle_insurance.php?Vehicle_id=".$row['Vehicle_id']."");
         }
     ?>

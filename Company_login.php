@@ -10,13 +10,16 @@
     .h1{
         text-align: center;
         font-size: 7em;
+        color: #FFFFFF;
+    }
+    body {
+        background-image: url('Images/BG.jpg');
     }
 </style>
 <body>
     <?php include 'navbar.php' ?>
     <div class="h1">
         <h1 >This is Login as Company</h1>
-        <!-- <form action="Garage_view_vehicle.php" method="post"> -->
         <form action="" method="post">
             <lable> Company name: </lable><br>
             <input type="text" name="Company_name"/><br><br>

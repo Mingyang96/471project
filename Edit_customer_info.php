@@ -43,45 +43,34 @@
         $Lname = $_POST['Lname'];
         $Phone = $_POST['Phone'];
         
-
-        //$sql = "INSERT INTO return_car (Vehicle_id, GID, Company_name, Email, Date, Penalty) VALUES ('$Vehicle_id', '$Vehicle_gid', '$Vehicle_company_name', '$Email', '$Date', '$Penalty')";
         $sql2 = "UPDATE emergency_contact SET Fname = '$Fname', Lname = '$Lname', Phone = '$Phone'";
-
         $result = mysqli_query($connection, $sql2);
-        //$result = mysqli_query($connection, $sql);
+    
         header("Location: Customer_login_show.php");
     }
-    // mysqli_close($connection);
-    ?>
+?>
 
-    <form action  ="" method = "post">
-        <input type = "hidden" name = "email" value = <?php echo $row['Email'];?>>
-        Fname: <input type = "text" name = "Fname" value = <?php echo $row['Fname'];?>><br>
-        Lname: <input type = "text" name = "Lname" value = <?php echo $row['Lname'];?>><br>
-        Phone: <input type = "text" name = "Phone" value = <?php echo $row['Phone'];?>><br>
+<form action  ="" method = "post">
+    <input type = "hidden" name = "email" value = <?php echo $row['Email'];?>>
+    Fname: <input type = "text" name = "Fname" value = <?php echo $row['Fname'];?>><br>
+    Lname: <input type = "text" name = "Lname" value = <?php echo $row['Lname'];?>><br>
+    Phone: <input type = "text" name = "Phone" value = <?php echo $row['Phone'];?>><br>
 
-        <input type = "submit" name="emergency_add" value = "Insert emergency contact">
-    </form>
+    <input type = "submit" name="emergency_add" value = "Insert emergency contact">
+</form>
 
-    <?php
-        if(isset($_POST['emergency_add'])) {
-            $Fname = $_POST['Fname'];
-            $Lname = $_POST['Lname'];
-            $Phone = $_POST['Phone'];
-            
-            $sql2 = "INSERT INTO emergency_contact (Email, Fname, Lname, Phone) VALUES ('$Email' ,'$Fname', '$Lname','$Phone')";
-    
-            $result = mysqli_query($connection, $sql2);
-            header("Location: Edit_customer_info.php");
-        }
+<?php
+    if(isset($_POST['emergency_add'])) {
+        $Fname = $_POST['Fname'];
+        $Lname = $_POST['Lname'];
+        $Phone = $_POST['Phone'];
+        
+        $sql2 = "INSERT INTO emergency_contact (Email, Fname, Lname, Phone) VALUES ('$Email' ,'$Fname', '$Lname','$Phone')";
 
-
-    ?>
-
-
-
-
-
+        $result = mysqli_query($connection, $sql2);
+        header("Location: Edit_customer_info.php");
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">

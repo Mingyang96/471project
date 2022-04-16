@@ -55,13 +55,9 @@
         $Province = $_POST['Province'];
         $Postal_code = $_POST['Postal_code'];
 
-        
-
-        //$sql = "INSERT INTO return_car (Vehicle_id, GID, Company_name, Email, Date, Penalty) VALUES ('$Vehicle_id', '$Vehicle_gid', '$Vehicle_company_name', '$Email', '$Date', '$Penalty')";
         $sql2 = "INSERT INTO garage (GID, Company_name, Street, City, Province, Postal_code) VALUES ('$GID', '$Company_name', '$Street', '$City', '$Province', '$Postal_code')";
-
         $result = mysqli_query($connection, $sql2);
-        //$result = mysqli_query($connection, $sql);
+
         session_start();
         $_SESSION['Vehicle_company_name'] = $Company_name;
         $_SESSION['Vehicle_gid'] = $GID;
