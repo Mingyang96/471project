@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Hurricane&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+php{
+    font-size: 10px;
+    font-family: "Hurricane" sans-serif;
+}
