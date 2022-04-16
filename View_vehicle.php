@@ -101,36 +101,10 @@
             
             mysqli_close($connection);
             
-            
-            // $result = mysqli_query($connection, "SELECT AUTO_INCREMENT FROM information_schema.TABLES WHERE TABLE_NAME = 'transaction' AND TABLE_SCHEMA = '471project'");
-            // $data = mysqli_fetch_array($result);
-            // echo '123';
-            // echo $data['Auto_increment'];
-            
-            
-            // echo $_SESSION['Start_date'];
-            // echo $_SESSION['End_date'];
+           
             ?>
         </form>
 
-
-
-
-        <!-- <form action="Vehicle_comparison.php" method="post">
-            <label>Vehicle 1: </label>
-            <input type="text" name="vehicle1" placeholder="Enter the vehicle ID"/><br>
-
-            <label>Vehicle 2: </label>
-            <input type="text" name="vehicle2" placeholder="Enter the vehicle ID"/><br>
-
-            <label>Vehicle 3: </label>
-            <input type="text" name="vehicle3" placeholder="Enter the vehicle ID"/><br>
-
-            <label>Vehicle 4: </label>
-            <input type="text" name="vehicle4" placeholder="Enter the vehicle ID"/><br>
-
-            <input type="submit" value="Compare"/><br><br>
-        </form> -->
 
     </div>
 </body>
