@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,16 +15,6 @@
 <body>
     <?php include 'navbar.php' ?>
     <div>
-        <!-- <p> The following is a table of all the cars in this garage </p><br>
-
-        <p>Inter the rent dates</p>
-        <label> Start date: </label>
-        <input type="date" name="Start_date"/><br>
-        
-        <label> End date: </label>
-        <input type="date" name="End_date"/><br>
-        <input type="submit" name="confirm" value="Confirm dates"/>-->
-        
         <form action="" method="post">
             <?php
             $connection = mysqli_connect("localhost", "root", "88888888", "471project");
